@@ -1,4 +1,4 @@
-const serverIp = prompt("What is the server ip? (ip:port)");
+const serverIp = prompt("What is the server ip? (ip:port)")
 
 var head = document.getElementsByTagName('head')[0];
 var script = document.createElement('script');
