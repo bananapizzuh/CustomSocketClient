@@ -1,4 +1,14 @@
-const serverIp = prompt("What is the server ip? (ip:port)")
+const serverIp = prompt("What is the server ip? (ip:port)")\
+
+var head = document.getElementsByTagName('head')[0];
+var script = document.createElement('script');
+script.type = 'text/javascript';
+script.onload = function() {
+    callFunctionFromScript();
+}
+script.src = `http://${serverIp}/socket.io/socket.io.js`;
+head.appendChild(script);
+
 const socket = io(`http://${serverIp}`)
 const messageContainer = document.getElementById('message-container')
 const messageForm = document.getElementById('send-container')
